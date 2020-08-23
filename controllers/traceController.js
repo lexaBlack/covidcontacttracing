@@ -4,7 +4,7 @@ const TraceModel = require('../models/test');
 
 exports.register = (req,res,next) =>{
 const cardid = req.body.cardid;
-const temp = req.body.temp;
+const temp = "0000";
 
 
 
