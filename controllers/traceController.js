@@ -17,7 +17,7 @@ const temp = req.body.temp;
 };
 
 exports.viewalldata=(req,res,next) =>{
-    TraceModel.findaAll({
+    TraceModel.findAll({
 
     }).then(result=>{
         res.status(201).json({status:'success',message:'All Data',data:[{result}]});
