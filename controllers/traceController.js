@@ -16,3 +16,12 @@ const temp = req.body.temp;
         .catch(err =>{console.log(err)});
 };
 
+exports.viewalldata=(req,res,next) =>{
+    TraceModel.findaAll({
+
+    }).then(result=>{
+        res.status(201).json({status:'success',message:'All Data',data:[{result}]});
+
+    })
+
+};
