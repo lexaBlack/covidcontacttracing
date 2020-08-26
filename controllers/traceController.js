@@ -21,7 +21,7 @@ exports.viewalldata=(req,res,next) =>{
 
     }).then(result=>{
         
-        res.status(201).json({status:'success',message:'All Data',data:[{}]});
+        res.status(201).json({status:'success',message:'All Data',data:result});
 
     })
 
