@@ -20,8 +20,21 @@ exports.viewalldata=(req,res,next) =>{
     TraceModel.findAll({
 
     }).then(result=>{
-        res.status(201).json({status:'success',message:'All Data',data:[{result}]});
+        
+        res.status(201).json({status:'success',message:'All Data',data:[{}]});
 
     })
+
+};
+exports.collectdata=(req,res,next) =>{
+    const cardidd = req.params.cardid;
+    const temp = "20";
+    
+    TraceModel.build({
+        ID:cardidd,
+        temp:temp
+
+        }).save().then(result =>{ res.send("Testing");})
+        .catch(err =>{console.log(err)});
 
 };
