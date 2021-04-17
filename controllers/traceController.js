@@ -38,3 +38,9 @@ exports.collectdata=(req,res,next) =>{
         .catch(err =>{console.log(err)});
 
 };
+
+exports.indexview=(req,res,next) =>{
+    
+res.send("Server is on:");
+
+};
