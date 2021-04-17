@@ -4,7 +4,7 @@ const router =express.Router();
 
 
 router.post('/send',TraceController.register);
-router.post('/',TraceController.indexview);
+router.get('/',TraceController.indexview);
 router.get('/view',TraceController.viewalldata);
 router.get('/send/:cardid',TraceController.collectdata);
 
