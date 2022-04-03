@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Net-Events</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body id="page-top" style="background: rgb(255,255,255);">
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper" style="background: rgb(255,255,255);">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown show d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="true" data-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu show dropdown-menu-right p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1"><a class="nav-link" href="/events" style="color: #141821;font-family: Roboto, sans-serif;font-weight: 500;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-dot" style="margin-top: -15px;font-size: 30px;color: #fc5b3f;">
+                                        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                                    </svg>Events</a></li>
+                            <li class="nav-item dropdown no-arrow mx-1"><a class="nav-link" href="/wallet" style="color: #141821;font-family: Roboto, sans-serif;font-weight: 500;">Wallet</a></li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small" style="color: #fc5b3f;font-family: Roboto, sans-serif;font-weight: 500;">Axel Kayonga</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar3.jpeg"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1 style="color: #141821;font-family: 'Squada One', serif;">Where today ?</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <form><input class="form-control" type="text" style="border-radius: 7px;border-style: solid;border-color: rgb(249,250,254);background: rgb(245,245,245);" placeholder="Search Event"></form>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="d-xl-flex justify-content-xl-end" style="margin-top: 10px;"><a class="test" href="#">
+                                    <h1 style="color: #141821;font-family: Roboto, sans-serif;font-size: 16px;font-weight: 500;">Popular</h1>
+                                </a><a class="test" href="#">
+                                    <h1 style="color: #a7a7a7;font-family: Roboto, sans-serif;font-size: 16px;font-weight: 500;margin-left: 10px;">Week events</h1>
+                                </a><a class="test" href="#">
+                                    <h1 style="color: #a7a7a7;font-family: Roboto, sans-serif;font-size: 16px;font-weight: 500;margin-left: 10px;">Concert</h1>
+                                </a><a class="test" href="#">
+                                    <h1 style="color: #a7a7a7;font-family: Roboto, sans-serif;font-size: 16px;font-weight: 500;margin-left: 10px;">Festival</h1>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="margin-top: 50px;">
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="col">
+                                <h1 style="color: #141821;font-family: Roboto, sans-serif;font-size: 25px;font-weight: 500;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-dot" style="margin-top: -15px;font-size: 30px;color: #fc5b3f;">
+                                        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                                    </svg>Popular</h1>
+                            </div>
+                        </div>
+                        <div id="tab-1" class="tab-pane active" role="tabpanel">
+                            <div class="row" style="padding-top: 20px;">
+                                <div class="col-md-4 col-xl-3"><a class="test" href="#">
+                                        <div style="background: url(&quot;assets/img/sachin-prabhashan-sBtqOe23bd0-unsplash.jpg&quot;) center / cover no-repeat;height: 375px;border-radius: 5px;">
+                                            <div style="height: 375px;background: rgba(20,24,33,0.54);">
+                                                <div>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;">22</h1>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;font-size: 18px;padding-left: 15px;">April</h1>
+                                                </div>
+                                                <div style="margin-top: 50%;">
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;font-size: 28px;">Water Pools<br>Party</h1>
+                                                    <h1 style="text-decoration: none;font-family: Roboto, sans-serif;color: #ffffff;font-size: 13px;padding-left: 9px;margin-bottom: 0px;font-weight: 500;"><i class="icon ion-location"></i>&nbsp;Kicukiro , KK 509 st</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 col-xl-3"><a class="test" href="#">
+                                        <div style="background: url(&quot;assets/img/sachin-prabhashan-sBtqOe23bd0-unsplash.jpg&quot;) center / cover no-repeat;height: 375px;border-radius: 5px;">
+                                            <div style="height: 375px;background: rgba(20,24,33,0.54);">
+                                                <div>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;">22</h1>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;font-size: 18px;padding-left: 15px;">April</h1>
+                                                </div>
+                                                <div style="margin-top: 50%;">
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;font-size: 28px;">Water Pool<br>Party</h1>
+                                                    <h1 style="text-decoration: none;font-family: Roboto, sans-serif;color: #ffffff;font-size: 13px;padding-left: 9px;margin-bottom: 0px;font-weight: 500;"><i class="icon ion-location"></i>&nbsp;Kicukiro , KK 509 st</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 col-xl-3"><a class="test" href="#">
+                                        <div style="background: url(&quot;assets/img/sachin-prabhashan-sBtqOe23bd0-unsplash.jpg&quot;) center / cover no-repeat;height: 375px;border-radius: 5px;">
+                                            <div style="height: 375px;background: rgba(20,24,33,0.54);">
+                                                <div>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;">22</h1>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;font-size: 18px;padding-left: 15px;">April</h1>
+                                                </div>
+                                                <div style="margin-top: 50%;">
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;font-size: 28px;">Water Pool<br>Party</h1>
+                                                    <h1 style="text-decoration: none;font-family: Roboto, sans-serif;color: #ffffff;font-size: 13px;padding-left: 9px;margin-bottom: 0px;font-weight: 500;"><i class="icon ion-location"></i>&nbsp;Kicukiro , KK 509 st</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 col-xl-3"><a class="test" href="#">
+                                        <div style="background: url(&quot;assets/img/sachin-prabhashan-sBtqOe23bd0-unsplash.jpg&quot;) center / cover no-repeat;height: 375px;border-radius: 5px;">
+                                            <div style="height: 375px;background: rgba(20,24,33,0.54);">
+                                                <div>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;">22</h1>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;font-size: 18px;padding-left: 15px;">April</h1>
+                                                </div>
+                                                <div style="margin-top: 50%;">
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;font-size: 28px;">Water Pool<br>Party</h1>
+                                                    <h1 style="text-decoration: none;font-family: Roboto, sans-serif;color: #ffffff;font-size: 13px;padding-left: 9px;margin-bottom: 0px;font-weight: 500;"><i class="icon ion-location"></i>&nbsp;Kicukiro , KK 509 st</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="padding-right: 50px;padding-left: 50px;margin-top: -100px;">
+                    <div style="background: #fc5b3f;height: 150px;"></div>
+                </div>
+                <div class="container" style="margin-top: 50px;">
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="col">
+                                <h1 style="color: #fc5b3f;font-family: Roboto, sans-serif;font-size: 25px;font-weight: 500;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-dot" style="margin-top: -15px;font-size: 30px;color: #141821;">
+                                        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                                    </svg>Music Festival</h1>
+                            </div>
+                        </div>
+                        <div id="tab-1" class="tab-pane active" role="tabpanel">
+                            <div class="row" style="padding-top: 20px;">
+                                <div class="col-md-4 col-xl-4"><a class="test" href="#">
+                                        <div style="background: url(&quot;assets/img/danny-howe-bn-D2bCvpik-unsplash.jpg&quot;) center / cover no-repeat;height: 375px;border-radius: 5px;">
+                                            <div style="height: 375px;background: rgba(20,24,33,0.54);">
+                                                <div>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;">22</h1>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;font-size: 18px;padding-left: 15px;">April</h1>
+                                                </div>
+                                                <div style="margin-top: 50%;">
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;font-size: 28px;">Kigali's <br>Best DJs&nbsp;</h1>
+                                                    <h1 style="text-decoration: none;font-family: Roboto, sans-serif;color: #ffffff;font-size: 13px;padding-left: 9px;margin-bottom: 0px;font-weight: 500;"><i class="icon ion-location"></i>&nbsp;GIsenyi , Palm Beach</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 col-xl-4"><a class="test" href="#">
+                                        <div style="background: url(&quot;assets/img/julian-lozano-x_HuiGpuZbk-unsplash.jpg&quot;) center / cover no-repeat;height: 375px;border-radius: 5px;">
+                                            <div style="height: 375px;background: rgba(20,24,33,0.54);">
+                                                <div>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;">22</h1>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;font-size: 18px;padding-left: 15px;">April</h1>
+                                                </div>
+                                                <div style="margin-top: 50%;">
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;font-size: 28px;">Kivu Fest<br>Kibuye Edit</h1>
+                                                    <h1 style="text-decoration: none;font-family: Roboto, sans-serif;color: #ffffff;font-size: 13px;padding-left: 9px;margin-bottom: 0px;font-weight: 500;"><i class="icon ion-location"></i>&nbsp;Karongi, Inzozi</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 col-xl-4"><a class="test" href="#">
+                                        <div style="background: url(&quot;assets/img/danny-howe-bn-D2bCvpik-unsplash.jpg&quot;) center / cover no-repeat;height: 375px;border-radius: 5px;">
+                                            <div style="height: 375px;background: rgba(20,24,33,0.54);">
+                                                <div>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;">22</h1>
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;font-size: 18px;padding-left: 15px;">April</h1>
+                                                </div>
+                                                <div style="margin-top: 50%;">
+                                                    <h1 style="text-decoration: none;font-family: 'Squada One', serif;color: #ffffff;margin-bottom: 0px;padding-left: 10px;font-size: 28px;">We dem Party<br>Gisenyi</h1>
+                                                    <h1 style="text-decoration: none;font-family: Roboto, sans-serif;color: #ffffff;font-size: 13px;padding-left: 9px;margin-bottom: 0px;font-weight: 500;"><i class="icon ion-location"></i>&nbsp;Gisenyi, Little Paradise</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="padding-right: 50px;padding-left: 50px;margin-top: -100px;">
+                    <div style="background: #141821;height: 150px;"></div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Net-Events 2021</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

@@ -20,10 +20,20 @@ exports.viewalldata=(req,res,next) =>{
     TraceModel.findAll({
 
     }).then(result=>{
-        
-        res.status(201).json({status:'success',message:'All Data',data:result});
+        console.log("------",result)
+        res.status(201).json({status:'success',message:'View All Data',data:result});
 
     })
+
+};
+exports.viewEvents=(req,res,next) =>{
+
+    res.render('index')
+
+};
+exports.wallet=(req,res,next) =>{
+
+    res.render('wallet')
 
 };
 exports.collectdata=(req,res,next) =>{

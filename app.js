@@ -1,49 +1,67 @@
-const express =require('express');
-const bodyParser = require('body-parser');
-const app = express();
+var express =require('express');
+var bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
-const multer =require('multer');
 const path = require('path');
-var cors = require('cors');
+const traceRoute = require('./routes/traceRoutes')
+const multer =require('multer');
 const sequelize = require('./utils/database');
-const TraceRoutes = require('./routes/traceRoutes');
-const TraceModel =require('./models/test');
 
-var corsOptions = {
-  origin: '*',//remember to change here to add your own domain @jahwin
-  optionsSuccessStatus: 200 
-}
-var portnumber = process.env.PORT || 8080;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
 
-app.use((req,res,next) =>{
-    res.setHeader('Access-Control-Allow-Origin','*');
-   res.setHeader(
-        'Access-Control-Allow-Methods',
-        'GET, POST'
-    );
-    
-   res.setHeader('Access-Control-Allow-Headers','X-Requested-With,Content-Type,Authorization');
-    next();
+const fileStorage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'files');
+  },
+  filename: (req, file, cb) => {
+    cb(null, new Date().toISOString() + '-' + file.originalname);
+  }
 });
+const fileFilter = (req, file, cb) => {
+  // if (file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+     cb(null, true);
+   //} else {
+    // cb(null, false);
+   //}
+ };
+var upload = multer({ storage: fileStorage, fileFilter: fileFilter });
+var app = express();
 
-app.use(TraceRoutes);
+app.use('/files', express.static(path.join(__dirname, 'files')));
+app.set('view engine','ejs');
+app.set('views','views');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname,'public')));
+var portnumber = process.env.PORT || 8080;
 
 
 app.use((error,req,res,next)=>{
     const status = error.statusCode || 500;
     const message = error.message;
     const data = error.data;
-    res.status(status).json({status:status,message:message,data:data})
+    console.log(data)
 });
+
+
+
+
+app.use((error,req,res,next)=>{
+  const status = error.statusCode || 500;
+  const message = error.message;
+  const data = error.data;
+  console.log("err",message,"Stast",status);
+});
+
+app.use(traceRoute);
+
+
+app.use((req,res,next)=>{
+  res.status(404).send("<h1>Page Have Not Yet been Implemented to lack of information</h1>");
+});
+
+
+sequelize.sync({force:false}).then(result => {
+  //,'192.168.0.9'
 app.listen(process.env.PORT || portnumber, function() {
-  });
-
-  sequelize.sync().then(result => {
-    
-    console.log(result);
-  })
-.catch(err =>{console.log(err);});
-
+});
+  console.log(result);
+})
